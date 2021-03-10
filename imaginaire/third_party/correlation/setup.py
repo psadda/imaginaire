@@ -21,7 +21,7 @@ setup(
         CUDAExtension('correlation_cuda', [
             './src/correlation_cuda.cc',
             './src/correlation_cuda_kernel.cu'
-        ], extra_compile_args={'cxx': ['-Wall', '-std=c++14'],
+        ], extra_compile_args={'cxx': ['-Wall', '-std=c++14', '-fopenmp'],
                                'nvcc': nvcc_args})
     ],
     cmdclass={

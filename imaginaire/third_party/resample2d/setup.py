@@ -19,7 +19,7 @@ setup(
         CUDAExtension('resample2d_cuda', [
             './src/resample2d_cuda.cc',
             './src/resample2d_kernel.cu'
-        ], extra_compile_args={'cxx': ['-Wall', '-std=c++14'],
+        ], extra_compile_args={'cxx': ['-Wall', '-std=c++14', '-fopenmp'],
                                'nvcc': nvcc_args})
     ],
     cmdclass={

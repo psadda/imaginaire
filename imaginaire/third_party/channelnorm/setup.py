@@ -21,7 +21,7 @@ setup(
         CUDAExtension('channelnorm_cuda', [
             './src/channelnorm_cuda.cc',
             './src/channelnorm_kernel.cu'
-        ], extra_compile_args={'cxx': ['-Wall', '-std=c++14'],
+        ], extra_compile_args={'cxx': ['-Wall', '-std=c++14', '-fopenmp'],
                                'nvcc': nvcc_args})
     ],
     cmdclass={
